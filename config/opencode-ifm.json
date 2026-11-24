@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "ifm/k2-horizon",
+  "providers": {
+    "ifm": {
+      "name": "IFM",
+      "env": ["IFM_API_KEY"],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "{env:IFM_BASE_URL}"
+      },
+      "models": {
+        "k2-horizon": {
+          "name": "IFM K2 Horizon 375B",
+          "modelID": "IFM/K2-Horizon-375B-A23B",
+          "settings": {
+            "reasoningEffort": "high"
+          },
+          "compatibility": {
+            "reasoningField": "reasoning_content",
+            "requireReasoning": true,
+            "maxTokensField": "max_tokens"
+          }
+        }
+      }
+    }
+  }
+}
